@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack_cbs/input_page/input_page.dart';
 import 'package:hack_cbs/screens/onboarding/onboarding_page.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: OnBoardingPage(),
+      home: InputPage(),
     );
   }
 }

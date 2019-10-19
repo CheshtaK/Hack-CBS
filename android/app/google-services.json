@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "348940886993",
+    "firebase_url": "https://hack-cbs-46335.firebaseio.com",
+    "project_id": "hack-cbs-46335",
+    "storage_bucket": "hack-cbs-46335.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348940886993:android:e356d4ede7082ce84c36f0",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348940886993-v9edt4r5lqv9g7du04vraso9ggfqmpo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.application",
+            "certificate_hash": "65b438addd2339404c766e7da9e6673cf9fdc927"
+          }
+        },
+        {
+          "client_id": "348940886993-2f5n065soi32dk9nf2ivrfj0deb1auqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTJrvaIBBa4MyWWSguFR71HbDlusYiVZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348940886993-2f5n065soi32dk9nf2ivrfj0deb1auqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
