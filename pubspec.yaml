@@ -25,7 +25,7 @@ dependencies:
       url: git://github.com/matteocrippa/flutter-nfc-reader.git
       ref: master
   
-  flutter_svg: ^0.5.5+1
+  flutter_svg: 0.14.2
 
 
 
@@ -48,6 +48,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  fonts:
+    - family: NothingYouCouldDo
+      fonts:
+        - asset: fonts/NothingYouCouldDo.ttf
   assets:
     - assets/images/doctor.jpg
     - assets/images/twitter.png
