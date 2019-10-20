@@ -23,10 +23,14 @@ class _HistoryTabState extends State<HistoryTab> with TickerProviderStateMixin {
   final double _initialPlanePaddingBottom = 16.0;
   final double _minPlanePaddingTop = 16.0;
   final List<FlightStop> _flightStops = [
-    FlightStop("JFK", "ORY", "JUN 05", "6h 25m", "\$851", "9:26 am - 3:43 pm"),
-    FlightStop("MRG", "FTB", "JUN 20", "6h 25m", "\$532", "9:26 am - 3:43 pm"),
-    FlightStop("ERT", "TVS", "JUN 20", "6h 25m", "\$718", "9:26 am - 3:43 pm"),
-    FlightStop("KKR", "RTY", "JUN 20", "6h 25m", "\$663", "9:26 am - 3:43 pm"),
+    FlightStop("Viral Fever", "ORY", "Sanjay Gupta", "6h 25m", "\$851", "2019"),
+    FlightStop("Stomach Ache", "FTB", "Shilpa Singh", "6h 25m", "\$532", "2018"),
+    FlightStop("Migraine", "TVS", "Sanjay Gupta", "6h 25m", "\$718", "2016"),
+    FlightStop("Dust Allergy", "RTY", "Sanjay Gupta", "6h 25m", "\$663", "2015"),
+    FlightStop("Hair Loss", "RTY", "Neeraj Sharma", "6h 25m", "\$663", "2013"),
+    
+    FlightStop("Chicken Pox", "RTY", "Shilpa Singh", "6h 25m", "\$663", "2010"),
+    FlightStop("Cough", "RTY", "Neeraj Sharma", "6h 25m", "\$663", "2009"),
   ];
   final List<GlobalKey<FlightStopCardState>> _stopKeys = [];
 
@@ -152,7 +156,7 @@ class _HistoryTabState extends State<HistoryTab> with TickerProviderStateMixin {
       child: ScaleTransition(
         scale: _fabAnimation,
         child: RaisedButton(
-          color: Colors.red,
+          color: Colors.lightBlue,
           padding: EdgeInsets.symmetric(horizontal: 50.0),
           child: new Text(
             "EMERGENCY",
@@ -211,7 +215,7 @@ class _HistoryTabState extends State<HistoryTab> with TickerProviderStateMixin {
     //what part of whole animation takes one dot travel
     final double slideDurationInterval = 0.4;
     //what are delays between dot animations
-    final double slideDelayInterval = 0.2;
+    final double slideDelayInterval = 0.1;
     //at the bottom of the screen
     double startingMarginTop = widget.height;
     //minimal margin from the top (where first dot will be placed)

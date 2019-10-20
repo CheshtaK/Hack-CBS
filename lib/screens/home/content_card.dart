@@ -53,7 +53,7 @@ class _ContentCardState extends State<ContentCard> {
           top: null,
           child: new Container(
             height: 2.0,
-            color: new Color(0xFFEEEEEE),
+            color: Colors.lightBlue,
           ),
         ),
 
@@ -62,7 +62,7 @@ class _ContentCardState extends State<ContentCard> {
             "TIMELINE",
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: Colors.red,
+              color: Colors.lightBlue,
             ),
             textAlign: TextAlign.center,
           ),
@@ -100,23 +100,23 @@ class _ContentCardState extends State<ContentCard> {
     );
   }
 
-  Widget _buildMulticityTab() {
-    return Column(
-      children: <Widget>[
-        Expanded(child: Container()),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
-          child: RaisedButton(
-            color: Colors.red,
-            child: Text("EMERGENCY"),
-            onPressed: () => setState(() => showInput = false),
-          ),
-          // FloatingActionButton(
-          //   onPressed: () => setState(() => showInput = false),
-          //   child: Icon(Icons.timeline, size: 36.0),
-          // ),
-        ),
-      ],
-    );
-  }
+  // Widget _buildMulticityTab() {
+  //   return Column(
+  //     children: <Widget>[
+  //       Expanded(child: Container()),
+  //       Padding(
+  //         padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
+  //         child: RaisedButton(
+  //           color: Colors.red,
+  //           child: Text("EMERGENCY"),
+  //           onPressed: () => setState(() => showInput = false),
+  //         ),
+  //         // FloatingActionButton(
+  //         //   onPressed: () => setState(() => showInput = false),
+  //         //   child: Icon(Icons.timeline, size: 36.0),
+  //         // ),
+  //       ),
+  //     ],
+  //   );
+  // }
 }

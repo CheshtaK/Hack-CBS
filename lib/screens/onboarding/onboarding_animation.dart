@@ -5,7 +5,7 @@ import 'package:hack_cbs/utility/color_utility.dart';
 class OnBoardingEnterAnimation {
   OnBoardingEnterAnimation(this.controller)
       : colorAnimation = new ColorTween(
-          begin: Color(getColorHexFromStr(COLOR_WELCOME)),
+          begin: COLOR_WELCOME,
           end: Color(getColorHexFromStr(COLOR_LOGIN)),
         ).animate(
           new CurvedAnimation(

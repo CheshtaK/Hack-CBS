@@ -14,7 +14,7 @@ class TitleBar extends StatelessWidget {
             gradient: new LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.red, const Color(0xFFE64C85)],
+              colors: [Colors.lightBlue, const Color(0xFFE64C85)],
             ),
           ),
           height: height,

@@ -1,5 +1,7 @@
 
 
+import 'package:flutter/material.dart';
+
 const PHONE_AUTH_HINT = "User Name";
 const PHONE_AUTH_VALIDATION_EMPTY = "Your phone number can\'t be empty!";
 const PHONE_AUTH_VALIDATION_INVALID = 'This phone number is invalid!';
@@ -8,7 +10,7 @@ const PASSWORD_AUTH_HINT = "Password";
 const PASSWORD_AUTH_VALIDATION_EMPTY = "Your password number can\'t be empty!";
 const PASSWORD_AUTH_VALIDATION_INVALID = 'This password number is invalid!';
 
-const COLOR_WELCOME = "#FFD201";
+const COLOR_WELCOME = Colors.lightBlue;
 const COLOR_LOGIN = "#2C3949";
 
 const IMAGE_LOGIN_PATH = "assets/images/doctor.jpg";

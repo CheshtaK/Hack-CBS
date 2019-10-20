@@ -72,17 +72,15 @@ class FlightStopCardState extends State<FlightStopCard>
       child: AnimatedBuilder(
         animation: _animationController,
         builder: (context, child) => new Stack(
-          alignment: Alignment.centerLeft,
-          children: <Widget>[
-            buildLine(),
-            buildCard(),
-            buildDurationText(),
-            buildAirportNamesText(),
-            buildDateText(),
-            buildPriceText(),
-            buildFromToTimeText(),
-          ],
-        ),
+              alignment: Alignment.centerLeft,
+              children: <Widget>[
+                buildLine(),
+                buildCard(),
+                buildAirportNamesText(),
+                buildDateText(),
+                buildFromToTimeText(),
+              ],
+            ),
       ),
     );
   }
@@ -94,20 +92,20 @@ class FlightStopCardState extends State<FlightStopCard>
     return maxWidth;
   }
 
-  Positioned buildDurationText() {
-    double animationValue = _durationPositionAnimation.value;
-    return Positioned(
-      top: getMarginTop(animationValue), //<--- animate vertical position
-      right: getMarginRight(animationValue), //<--- animate horizontal pozition
-      child: Text(
-        widget.flightStop.duration,
-        style: new TextStyle(
-          fontSize: 10.0 * animationValue, //<--- animate fontsize
-          color: Colors.grey,
-        ),
-      ),
-    );
-  }
+  // Positioned buildDurationText() {
+  //   double animationValue = _durationPositionAnimation.value;
+  //   return Positioned(
+  //     top: getMarginTop(animationValue), //<--- animate vertical position
+  //     right: getMarginRight(animationValue), //<--- animate horizontal pozition
+  //     child: Text(
+  //       widget.flightStop.duration,
+  //       style: new TextStyle(
+  //         fontSize: 10.0 * animationValue, //<--- animate fontsize
+  //         color: Colors.grey,
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Positioned buildAirportNamesText() {
     double animationValue = _airportsPositionAnimation.value;
@@ -115,7 +113,7 @@ class FlightStopCardState extends State<FlightStopCard>
       top: getMarginTop(animationValue),
       left: getMarginLeft(animationValue),
       child: Text(
-        "${widget.flightStop.from} \u00B7 ${widget.flightStop.to}",
+        "${widget.flightStop.from}",
         style: new TextStyle(
           fontSize: 14.0 * animationValue,
           color: Colors.grey,
@@ -138,20 +136,20 @@ class FlightStopCardState extends State<FlightStopCard>
     );
   }
 
-  Positioned buildPriceText() {
-    double animationValue = _pricePositionAnimation.value;
-    return Positioned(
-      right: getMarginRight(animationValue),
-      child: Text(
-        "${widget.flightStop.price}",
-        style: new TextStyle(
-          fontSize: 16.0 * animationValue,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
+  // Positioned buildPriceText() {
+  //   double animationValue = _pricePositionAnimation.value;
+  //   return Positioned(
+  //     right: getMarginRight(animationValue),
+  //     child: Text(
+  //       "${widget.flightStop.price}",
+  //       style: new TextStyle(
+  //         fontSize: 16.0 * animationValue,
+  //         color: Colors.black,
+  //         fontWeight: FontWeight.bold,
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Positioned buildFromToTimeText() {
     double animationValue = _fromToPositionAnimation.value;
@@ -191,12 +189,30 @@ class FlightStopCardState extends State<FlightStopCard>
       child: Transform.scale(
         scale: animationValue,
         child: Container(
-          width: 140.0,
-          height: 80.0,
-          child: new Card(
-            color: Colors.grey.shade100,
-          ),
-        ),
+            width: 140.0,
+            height: 80.0,
+            child: InkWell(
+              child: new Card(
+                color: Colors.grey.shade100,
+              ),
+              onTap: () => showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      contentPadding: EdgeInsets.all(0.0),
+                      content: Card(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Text("${widget.flightStop.from}"),
+                            Text("${widget.flightStop.date}"),
+                            Text("")
+                          ],
+                        ),
+                      ),
+                    );
+                  }),
+            )),
       ),
     );
   }

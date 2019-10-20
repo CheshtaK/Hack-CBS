@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hack_cbs/components/forward_button.dart';
 import 'package:hack_cbs/components/header_text.dart';
 import 'package:hack_cbs/components/trapozoid_cut_colored_image.dart';
+import 'package:hack_cbs/screens/home/home_page.dart';
 import 'package:hack_cbs/screens/login/login_animation.dart';
 import 'package:hack_cbs/utility/app_constant.dart';
 import 'package:hack_cbs/utility/color_utility.dart';
@@ -30,7 +31,7 @@ class LoginPage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         _trapoziodView(size, textTheme),
-        _buttonContainer(size, textTheme),
+        _buttonContainer(size, textTheme, context),
       ],
     );
   }
@@ -142,7 +143,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _buttonContainer(Size size, TextTheme textTheme) {
+  Widget _buttonContainer(Size size, TextTheme textTheme, BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: size.height * 0.8),
       child: Container(
@@ -171,7 +172,7 @@ class LoginPage extends StatelessWidget {
                   enterAnimation.translation.value * 200, 0.0, 0.0),
               child: ForwardButton(
                 onPressed: () {
-                  goToWelcomeListener.onGoToWelcomeTap();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(false)));
                 },
                 label: BUTTON_PROCEED,
               ),

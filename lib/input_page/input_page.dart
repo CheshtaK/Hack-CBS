@@ -1,4 +1,3 @@
-import 'package:hack_cbs/app_bar.dart';
 import 'package:hack_cbs/fade_route.dart';
 import 'package:hack_cbs/input_page/gender/gender_card.dart';
 import 'package:hack_cbs/input_page/height/height_card.dart';
@@ -7,7 +6,7 @@ import 'package:hack_cbs/input_page/pacman_slider.dart';
 import 'package:hack_cbs/input_page/transition_dot.dart';
 import 'package:hack_cbs/input_page/weight/weight_card.dart';
 import 'package:hack_cbs/model/gender.dart';
-import 'package:hack_cbs/result_page/result_page.dart';
+import 'package:hack_cbs/screens/home/home_page.dart';
 import 'package:hack_cbs/widget_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -49,13 +48,10 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
     return Stack(
       children: <Widget>[
         Scaffold(
-          appBar: PreferredSize(
-            child: BmiAppBar(),
-            preferredSize: Size.fromHeight(appBarHeight(context)),
-          ),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Padding(padding: EdgeInsets.only(top: 20),),
               InputSummaryCard(
                 gender: gender,
                 weight: weight,
@@ -123,11 +119,7 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
 
   _goToResultPage() async {
     return Navigator.of(context).push(FadeRoute(
-      builder: (context) => ResultPage(
-            weight: weight,
-            height: height,
-            gender: gender,
-          ),
+      builder: (context) => HomePage(true)
     ));
   }
 }
