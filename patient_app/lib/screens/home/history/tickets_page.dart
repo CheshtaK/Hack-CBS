@@ -11,10 +11,10 @@ class TicketsPage extends StatefulWidget {
 class _TicketsPageState extends State<TicketsPage>
     with TickerProviderStateMixin {
   List<FlightStopTicket> stops = [
-    new FlightStopTicket("Sahara", "SHE", "Macao", "MAC", "SE2341"),
-    new FlightStopTicket("Macao", "MAC", "Cape Verde", "CAP", "KU2342"),
-    new FlightStopTicket("Cape Verde", "CAP", "Ireland", "IRE", "KR3452"),
-    new FlightStopTicket("Ireland", "IRE", "Sahara", "SHE", "MR4321"),
+    new FlightStopTicket("", "Shilpa", "21 Oct", "12:00", ""),
+    new FlightStopTicket("", "Neeraj", "22 Nov", "12:00", ""),
+    new FlightStopTicket("", "Sandeep", "24 Dec", "12:00", ""),
+    new FlightStopTicket("", "Sanjay", "3 Feb", "12:00", ""),
   ];
   AnimationController cardEntranceAnimationController;
   List<Animation> ticketAnimations;
@@ -94,7 +94,7 @@ class _TicketsPageState extends State<TicketsPage>
       scale: fabAnimation,
       child: FloatingActionButton(
         onPressed: () => Navigator.of(context).pop(),
-        child: new Icon(Icons.fingerprint),
+        child: new Icon(Icons.add),
       ),
     );
   }

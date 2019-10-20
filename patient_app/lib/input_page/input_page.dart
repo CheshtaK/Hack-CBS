@@ -1,3 +1,4 @@
+import 'package:hack_cbs/app_bar.dart';
 import 'package:hack_cbs/fade_route.dart';
 import 'package:hack_cbs/input_page/gender/gender_card.dart';
 import 'package:hack_cbs/input_page/height/height_card.dart';
@@ -48,6 +49,10 @@ class InputPageState extends State<InputPage> with TickerProviderStateMixin {
     return Stack(
       children: <Widget>[
         Scaffold(
+          appBar: PreferredSize(
+            child: BmiAppBar(),
+            preferredSize: Size.fromHeight(appBarHeight(context))
+          ),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

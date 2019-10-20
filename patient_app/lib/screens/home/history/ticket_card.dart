@@ -59,9 +59,9 @@ class TicketCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.only(bottom: 0.0),
                 child: Icon(
-                  Icons.airplanemode_active,
+                  Icons.phone,
                   color: Colors.red,
                 ),
               ),

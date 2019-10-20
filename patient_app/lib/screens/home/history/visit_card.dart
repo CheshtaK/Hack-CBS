@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:hack_cbs/components/funky_overlay.dart';
 import 'package:hack_cbs/screens/home/history/visit_model.dart';
 
 class FlightStopCard extends StatefulWidget {
@@ -192,27 +193,20 @@ class FlightStopCardState extends State<FlightStopCard>
             width: 140.0,
             height: 80.0,
             child: InkWell(
-              child: new Card(
-                color: Colors.grey.shade100,
-              ),
-              onTap: () => showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      contentPadding: EdgeInsets.all(0.0),
-                      content: Card(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            Text("${widget.flightStop.from}"),
-                            Text("${widget.flightStop.date}"),
-                            Text("")
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
-            )),
+                child: new Card(
+                  color: Colors.grey.shade100,
+                ),
+                onTap: () => showDialog(
+                    context: context,
+                    builder: (_) => FunkyOverlay())
+                // context: context,
+                // builder: (BuildContext context) => AssetGiffyDialog(
+                //   image: Image(image: AssetImage("images/medicine.gif")),
+                //   title: Text('"${widget.flightStop.from}'),
+                //   description: Text("medicines"),
+                //   onOkButtonPressed: () => Navigator.pop(context)
+                // )),
+                )),
       ),
     );
   }
