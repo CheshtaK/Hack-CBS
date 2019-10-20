@@ -1,0 +1,23 @@
+version: “3”
+services:
+  api:
+    build: ./api
+    image: talkit-out-api:latest
+    container_name: talkit-out-api
+    env_file: config/.env
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 8088:8088
+  db:
+    build: ./db
+    image: talkit-out-db:latest
+    container_name: talkit-out-db
+    env_file: config/.env
+    volumes:
+      - talkit-out-db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+volumes:
+  talkit-out-db:
+    driver: local
