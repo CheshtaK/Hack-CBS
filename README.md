@@ -11,6 +11,6 @@ Two apps namely the patient app and the doctor/insurance company app were built 
 all the required features, constraints and access scope restrictions. Due to the unavailability of RFID cards, cards having NFC tags were
 used as a unique identity card.
 
-### Patient App  
-
-![alt-text](https://github.com/CheshtaK/Hack-CBS/blob/master/patient_app/patient_app.gif)
+Patient App | Admin App
+--- | ---
+![alt-text](https://github.com/CheshtaK/Hack-CBS/blob/master/patient_app/patient_app.gif)    |  ![alt-text](https://github.com/CheshtaK/Hack-CBS/blob/master/admin_app/admin_app.gif) 
